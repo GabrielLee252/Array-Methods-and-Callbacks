@@ -24,6 +24,30 @@ fifaData.forEach((game) => {
     ? console.log(game["Away Team Name"])
     : null;
 });
+// (c)
+fifaData.forEach((game) => {
+    return game.Stage === "Final" && game.Year === 2014
+      ? console.log(game["Home Team Goals"])
+      : null;
+  });
+// (d)
+fifaData.forEach((game) => {
+    return game.Stage === "Final" && game.Year === 2014
+      ? console.log(game["Away Team Goals"])
+      : null;
+  });
+//e
+fifaData.forEach((game) => {
+    return game.Stage === "Final" &&
+      game.Year === 2014 &&
+      game["Home Team Goals"] > game["Away Team Goals"]
+      ? console.log(game["Home Team Name"])
+      : game.Stage === "Final" &&
+        game.Year === 2014 &&
+        game["Home Team Goals"] < game["Away Team Goals"]
+      ? console.log(game["Away Team Name"])
+      : null;
+  });
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
 1. Receive data as a parameter
