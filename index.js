@@ -48,6 +48,8 @@ fifaData.forEach((game) => {
       ? console.log(game["Away Team Name"])
       : null;
   });
+
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
 1. Receive data as a parameter
@@ -56,10 +58,17 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-   /* code here */
-}
+function getFinals(data) {
+    let finalsArray = [];
+    data.forEach((game) => {
+        if (game.Stage === "Final") {
+            finalsArray.push(game);
+        }
+    });
+    return finalsArray;
 
+    console.log(getFinals(fifaData));
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
